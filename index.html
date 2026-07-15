@@ -912,7 +912,7 @@ function loadCache(){
 let refreshTimer = null;
 function startAutoRefresh(){
   if(refreshTimer) clearInterval(refreshTimer);
-  const minutes = parseFloat(localStorage.getItem(REFRESH_KEY)) || 5;
+  const minutes = parseFloat(localStorage.getItem(REFRESH_KEY)) || 1;
   refreshTimer = setInterval(fetchData, minutes * 60000);
 }
 
